@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- n8n tokens: {{business_name}}, {{service_keyword}}, {{suburb}}, {{tagline}} -->
+  <title>Evergreen Gardens — Garden Maintenance Hawthorn | 24/7 Emergency Service</title>
+  <!-- n8n token: {{meta_description}} -->
+  <meta name="description" content="Evergreen Gardens — reliable garden maintenance services in Hawthorn and surrounding areas. Fully insured garden care for homes and businesses. 24/7 emergency callouts. Call 0412 345 678.">
+  <link rel="canonical" href="{{site_url}}">
+
+  <!-- Open Graph — n8n tokens: {{business_name}}, {{service_keyword}}, {{suburb}}, {{meta_description}} -->
+  <meta property="og:title" content="Evergreen Gardens — Garden Maintenance Hawthorn | 24/7 Emergency Service">
+  <meta property="og:description" content="Reliable garden maintenance services in Hawthorn. Fully insured garden care available 24/7. Call 0412 345 678.">
+  <meta property="og:image" content="{{hero_image}}">
+  <meta property="og:url" content="{{site_url}}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+
+  <!-- JSON-LD Schema — n8n replaces: {{business_name}}, {{phone}}, {{email}}, {{street_address}},
+       {{suburb}}, {{state}}, {{postcode}}, {{hours_schema}}, {{social_facebook}}, {{social_instagram}} -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Evergreen Gardens",
+    "description": "{{schema_description}}",
+    "image": "{{hero_image}}",
+    "url": "{{site_url}}",
+    "telephone": "0412345678",
+    "email": "info@evergreengardens.com.au",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "718 Glenferrie Rd",
+      "addressLocality": "Hawthorn",
+      "addressRegion": "VIC",
+      "postalCode": "3122",
+      "addressCountry": "AU"
+    },
+    "openingHoursSpecification": {{schema_hours}},
+    "priceRange": "$",
+    "areaServed": {
+      "@type": "City",
+      "name": "Hawthorn"
+    },
+    "sameAs": {{schema_sameas}}
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Critical inline CSS -->
+  <style>
+    body { margin: 0; font-family: 'DM Sans', sans-serif; color: #788094; background: #fff; }
+    #top-bar { background: #010f34; }
+    #navbar { position: sticky; top: 0; z-index: 1000; background: #fff; }
+  </style>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <!-- n8n tokens: {{business_name}}, {{email}}, {{address}} -->
+  <div id="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <span class="top-bar-text">Welcome to Evergreen Gardens Services</span>
+        <a href="mailto:info@evergreengardens.com.au" class="top-bar-email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          info@evergreengardens.com.au
+        </a>
+        <span class="top-bar-address">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          718 Glenferrie Rd, Hawthorn VIC 3122
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <!-- n8n tokens: {{logo_url}}, {{business_name}}, {{phone}} -->
+  <nav id="navbar">
+      <div class="nav-inner">
+        <!-- DGG:LOGO:HEADER_TOP:START -->
+        <a href="#" class="nav-logo" aria-label="Evergreen Gardens Home">
+          <svg class="nav-logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="18" r="18" fill="#1646D2"/>
+            <g transform="translate(6,6)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8" fill="#fff"/></g>
+          </svg>
+          <span class="nav-logo-text">EVERGREEN <strong>GARDENS</strong></span>
+        </a>
+        <!-- DGG:LOGO:HEADER_TOP:END -->
+
+        <!-- Desktop nav links -->
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+  
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Phone + CTA -->
+        <div class="nav-actions">
+          <a href="tel:0412345678" class="nav-phone">
+            <span class="nav-phone-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            </span>
+            <span class="nav-phone-text">0412 345 678</span>
+          </a>
+          <a href="#contact" class="nav-cta">Get a Quote</a>
+        </div>
+
+        <!-- Mobile: phone icon + hamburger -->
+        <div class="nav-mobile-right">
+          <a href="tel:0412345678" class="nav-mobile-phone" aria-label="Call Evergreen Gardens">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.84a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+          <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <a href="#hero" class="mobile-menu-link">Home</a>
+      <a href="#services" class="mobile-menu-link">Services</a>
+      <a href="#about" class="mobile-menu-link">About</a>
+
+      <a href="#contact" class="mobile-menu-link">Contact</a>
+      <a href="tel:0412345678" class="mobile-menu-link mobile-menu-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.84a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        0412 345 678
+      </a>
+      <a href="#contact" class="btn btn-accent mobile-menu-cta">Get a Quote</a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <!-- n8n tokens: {{business_name}}, {{service_keyword}}, {{suburb}}, {{phone}}, {{hero_image}} -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <div class="section-subtitle">
+            <svg class="fan-icon" width="20" height="20" viewBox="0 0 28 28" fill="#1646D2" aria-hidden="true"><g transform="translate(2,2)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8"/></g></svg>
+            Fully Insured Garden Care
+          </div>
+          <h1>Evergreen Gardens —<br>Trusted Garden Maintenance in Hawthorn</h1>
+          <p>Lawn mowing, hedging, garden clean-ups, and full landscaping, reliable, fully insured garden maintenance for homes and businesses. Regular or one-off, your garden always looking its best.</p>
+          <div class="hero-buttons">
+            <a href="tel:0412345678" class="btn btn-accent">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.84a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call Now — 0412 345 678
+            </a>
+            <a href="#contact" class="btn btn-outline">Get a Free Quote</a>
+          </div>
+          <!-- DGG:HERO_BADGES:START -->
+          <ul class="hero-badges">
+            <li class="trust-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <span>Fully Insured</span>
+            </li>
+            <li class="trust-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>24/7 Emergency</span>
+            </li>
+            <li class="trust-badge">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Free Quotes</span>
+            </li>
+          </ul>
+          <!-- DGG:HERO_BADGES:END -->
+        </div>
+        <div class="hero-img">
+          <div class="hero-img-frame">
+            <div class="hero-img-accent hero-img-accent--top" aria-hidden="true"></div>
+            <div class="hero-img-accent hero-img-accent--bottom" aria-hidden="true"></div>
+            <img src="images/gardening-hero.webp" alt="Professional gardener mowing and maintaining a lush Australian garden for Evergreen Gardens" width="600" height="500" loading="eager">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS COUNTER ============ -->
+  <!-- n8n tokens: {{stat_1_number}}, {{stat_1_label}}, {{stat_2_number}}, {{stat_2_label}}, {{stat_3_number}}, {{stat_3_label}} -->
+  <section id="stats" class="stats-section">
+    <div class="container">
+      <!-- DGG:STATS:START -->
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <span class="stat-number" data-target="500" data-suffix="+">0</span>
+          <span class="stat-label">Jobs Completed</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="#1646D2" aria-hidden="true"><g transform="translate(2,2)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8"/></g></svg>
+        </div>
+        <div class="stat-item fade-in">
+          <span class="stat-number" data-target="15" data-suffix="+">0</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 28 28" fill="#1646D2" aria-hidden="true"><g transform="translate(2,2)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8"/></g></svg>
+        </div>
+        <div class="stat-item fade-in">
+          <span class="stat-number" data-target="1200" data-suffix="+">0</span>
+          <span class="stat-label">Happy Customers</span>
+        </div>
+      </div>
+      <!-- DGG:STATS:END -->
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <!-- n8n tokens: {{service_N_name}}, {{service_N_description}} — services come from niche JSON or client form -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">
+          <svg class="fan-icon" width="20" height="20" viewBox="0 0 28 28" fill="#1646D2" aria-hidden="true"><g transform="translate(2,2)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8"/></g></svg>
+          Our Services
+        </div>
+        <h2>Professional Garden Maintenance Services</h2>
+      </div>
+
+      <!-- DGG:SERVICES:START -->
+      <div class="services-grid">
+
+        <article class="service-card service-card--highlight fade-in">
+          <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8"/></svg></div>
+          <hr class="service-card-divider">
+          <h3>Garden Maintenance</h3>
+          <p>Reliable, scheduled garden maintenance for homes and businesses, mowing, hedging, weeding, and tidy-ups on a regular or one-off basis, keeping your garden looking its best.</p>
+        </article>
+
+        <article class="service-card fade-in">
+          <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M18.5 14c-.95 0-1.81.38-2.44 1H9.39L5.74 3H2v2h2.26L7 14.05c-.15-.02-.32-.05-.5-.05C4.57 14 3 15.57 3 17.5S4.57 21 6.5 21c1.39 0 2.59-.82 3.15-2h5.7c.56 1.18 1.76 2 3.15 2c1.93 0 3.5-1.57 3.5-3.5S20.43 14 18.5 14m-12 5c-.83 0-1.5-.67-1.5-1.5S5.67 16 6.5 16s1.5.67 1.5 1.5S7.33 19 6.5 19m12 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5s1.5.67 1.5 1.5s-.67 1.5-1.5 1.5m-8.37-5l-.6-2h3.23c.74 0 1.45.43 1.79 1.11L15 14z"/></svg></div>
+          <hr class="service-card-divider">
+          <h3>Lawn Mowing &amp; Edging</h3>
+          <p>Regular mowing, edging, and trimming that keeps your lawn neat, healthy, and looking its best all year round.</p>
+        </article>
+
+        <article class="service-card fade-in">
+          <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="m19 3l-6 6l2 2l7-7V3m-10 9.5a.5.5 0 0 1-.5-.5a.5.5 0 0 1 .5-.5a.5.5 0 0 1 .5.5a.5.5 0 0 1-.5.5M6 20a2 2 0 0 1-2-2a2 2 0 0 1 2-2a2 2 0 0 1 2 2a2 2 0 0 1-2 2M6 8a2 2 0 0 1-2-2a2 2 0 0 1 2-2a2 2 0 0 1 2 2a2 2 0 0 1-2 2m3.64-.36c.23-.5.36-1.05.36-1.64a4 4 0 0 0-4-4a4 4 0 0 0-4 4a4 4 0 0 0 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14a4 4 0 0 0-4 4a4 4 0 0 0 4 4a4 4 0 0 0 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1z"/></svg></div>
+          <hr class="service-card-divider">
+          <h3>Hedge &amp; Shrub Trimming</h3>
+          <p>Shaping, trimming, and tidying of hedges, shrubs, and screening plants for clean lines and healthy growth.</p>
+        </article>
+
+        <article class="service-card fade-in">
+          <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M13 16.12a7 7 0 0 0 6.17-6.95c0-3.87-3.13-7-7-7a7 7 0 0 0-7 7c0 3.47 2.52 6.33 5.83 6.89V20H5v2h14v-2h-6z"/></svg></div>
+          <hr class="service-card-divider">
+          <h3>Landscaping &amp; Garden Design</h3>
+          <p>Full garden makeovers and landscaping, from design and plant selection to soft-landscaping that transforms your outdoor space.</p>
+        </article>
+
+        <article class="service-card fade-in">
+          <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M2 22v-2s5-2 10-2s10 2 10 2v2zm9.3-12.9c-1.2-3.9-7.3-3-7.3-3s.2 7.8 5.9 6.6C9.5 9.8 8 9 8 9c2.8 0 3 3.4 3 3.4V17h2v-4.2s0-3.9 3-4.9c0 0-2 3-2 5c7 .7 7-8.9 7-8.9s-8.9-1-9.7 5.1"/></svg></div>
+          <hr class="service-card-divider">
+          <h3>Weeding &amp; Garden Bed Care</h3>
+          <p>Thorough weeding and garden bed maintenance that keeps beds clean, healthy, and free of invasive growth.</p>
+        </article>
+
+        <article class="service-card fade-in">
+          <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="m15.1 1.81l-2.83 2.83c-.77.78-.77 2.05 0 2.83l1.41 1.41l-4.55 4.55l-2.82-2.83L4.89 12c-4.95 5-1.39 8.5-1.39 8.5S7 24 12 19.09l1.41-1.41l-2.8-2.8l4.54-4.54l1.39 1.39c.78.77 2.05.77 2.83 0L22.2 8.9zm2.83 8.47L16.55 8.9l-1.44-1.44l-1.4-1.4l1.41-1.41l4.23 4.23z"/></svg></div>
+          <hr class="service-card-divider">
+          <h3>Mulching</h3>
+          <p>Fresh mulch and soil conditioning spread through garden beds to lock in moisture, suppress weeds, and keep plants healthy.</p>
+        </article>
+
+        <article class="service-card fade-in">
+          <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 15h15v3.2H6z"/><path d="M8.5 15L9 12 9.5 15ZM10.6 15L11.1 12 11.6 15ZM12.7 15L13.2 12 13.7 15ZM14.8 15L15.3 12 15.8 15ZM16.9 15L17.4 12 17.9 15ZM19 15L19.5 12 20 15Z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M6 14a1 1 0 0 0 1-1 2 2 0 0 0-2-2 3 3 0 0 0-3 3 4 4 0 0 0 4 4"/><path d="M3.2 10.6l.3-2.4 1 2.2zM5.6 10.1l.3-2.5 1 2.3z"/></svg></div>
+          <hr class="service-card-divider">
+          <h3>Turf &amp; Instant Lawn Laying</h3>
+          <p>Ground preparation and laying of quality instant turf for a lush, even lawn that is ready to enjoy fast.</p>
+        </article>
+
+        <article class="service-card fade-in">
+          <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M10.5 17.05L9.43 16L22.07 3.35l-1.41-1.42L8 14.58L6.95 13.5c-.78-.77-2.05-.77-2.83 0L2 15.64l.71.7l2.12-2.12l.71.71l-2.13 2.12l.71.71l2.12-2.12l.71.7l-2.12 2.12l.71.71l2.12-2.12l.7.71l-2.12 2.12l.71.71l2.12-2.13l.71.71l-2.12 2.12l.7.71l2.14-2.12c.77-.78.77-2.05 0-2.83"/></svg></div>
+          <hr class="service-card-divider">
+          <h3>Garden Clean-ups &amp; Green Waste Removal</h3>
+          <p>One-off garden clean-ups and removal of green waste, prunings, and clippings, leaving your yard clean and clutter-free.</p>
+        </article>
+
+        <article class="service-card fade-in">
+          <div class="service-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill="currentColor" d="M11 21v-4.26c-.47.17-.97.26-1.5.26C7 17 5 15 5 12.5c0-1.27.5-2.41 1.36-3.23C6.13 8.73 6 8.13 6 7.5C6 5 8 3 10.5 3c1.56 0 2.94.8 3.75 2h.25a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5q-.75 0-1.5-.21V21z"/></svg></div>
+          <hr class="service-card-divider">
+          <h3>Pruning &amp; Small Tree Care</h3>
+          <p>Careful pruning and shaping of small trees, shrubs, and ornamentals to keep them healthy, safe, and well-formed.</p>
+        </article>
+
+      </div>
+      <!-- DGG:SERVICES:END -->
+    </div>
+  </section>
+
+  <!-- ============ ABOUT / WHY CHOOSE US ============ -->
+  <!-- n8n tokens: {{business_name}}, {{about_text}}, {{stat_2_number}}, {{stat_2_label}} -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap fade-in">
+          <img src="images/gardening-about.webp" alt="Evergreen Gardens branded work van and tools" class="about-img-main" loading="lazy">
+          <img src="images/gardening-service-landscaping-garden-design.webp" alt="Landscaping and garden design by Evergreen Gardens" class="about-img-secondary" loading="lazy">
+        </div>
+        <div class="about-content fade-in">
+          <div class="section-subtitle">
+            <svg class="fan-icon" width="20" height="20" viewBox="0 0 28 28" fill="#1646D2" aria-hidden="true"><g transform="translate(2,2)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8"/></g></svg>
+            Why Choose Us
+          </div>
+          <h2>Why Choose Evergreen Gardens</h2>
+          <!-- n8n replaces: {{about_text}} -->
+          <p>With over 15 years of experience serving Hawthorn and surrounding areas, Evergreen Gardens has built a reputation for honest, high-quality garden care. We are fully insured, police-checked, and committed to keeping every garden looking its best, on a schedule that suits you.</p>
+
+          <div class="about-stat">
+            <span class="stat-number" data-target="15" data-suffix="+">0</span>
+            <span class="about-stat-label">Years Experience</span>
+          </div>
+
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <div>
+                <h3>Fully Insured &amp; Police-Checked</h3>
+                <p>Reliable gardeners, fully insured and police-checked, for your peace of mind.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h3>On Time, Every Time</h3>
+                <p>We respect your time. We show up when we say we will, or we'll let you know in advance.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/></svg>
+              </div>
+              <div>
+                <h3>Satisfaction Guaranteed</h3>
+                <p>We stand behind our work. If you're not happy, we'll make it right.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+              </div>
+              <div>
+                <h3>Clean &amp; Tidy Work</h3>
+                <p>We leave your home or business as clean as we found it. Every time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW WE WORK ============ -->
+  <section id="how-we-work" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-subtitle">
+          <svg class="fan-icon" width="20" height="20" viewBox="0 0 28 28" fill="#1646D2" aria-hidden="true"><g transform="translate(2,2)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8"/></g></svg>
+          Our Process
+        </div>
+        <h2>How We Work</h2>
+        <p class="section-description">Simple, straightforward, and stress-free. From first contact to job complete, we make it easy.</p>
+      </div>
+
+      <div class="how-steps">
+        <div class="how-step fade-in">
+          <div class="how-step-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.84a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/></svg>
+          </div>
+          <div class="how-step-num">01</div>
+          <h3>Discuss Your Project</h3>
+          <p>We'll discuss your project and provide smart solutions.</p>
+        </div>
+        <div class="how-step fade-in">
+          <div class="how-step-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="11" y2="13"/><line x1="11" y1="13" x2="15" y2="17"/></svg>
+          </div>
+          <div class="how-step-num">02</div>
+          <h3>Receive Your Quote</h3>
+          <p>You'll get a clear, upfront quote — no surprises, no hidden fees.</p>
+        </div>
+        <div class="how-step fade-in">
+          <div class="how-step-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <div class="how-step-num">03</div>
+          <h3>We Get to Work</h3>
+          <p>Once you give us the go-ahead, we'll schedule and complete the job.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <!-- n8n tokens: {{review_1_text}}, {{review_1_name}}, {{review_1_rating}},
+       {{review_2_text}}, {{review_2_name}}, {{review_2_rating}},
+       {{review_3_text}}, {{review_3_name}}, {{review_3_rating}} -->
+  <section id="reviews" class="testimonials-section">
+    <!-- Dot pattern background -->
+    <div class="testimonials-dots" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="testimonials-grid">
+
+        <!-- Left: heading + 3 reviews stacked -->
+        <div class="testimonials-content">
+          <div class="section-subtitle">
+            <svg class="fan-icon" width="20" height="20" viewBox="0 0 28 28" fill="#1646D2" aria-hidden="true"><g transform="translate(2,2)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8"/></g></svg>
+            Testimonials
+          </div>
+          <h2>What Our Clients Say</h2>
+
+          <!-- DGG:REVIEWS:START -->
+          <div class="reviews-grid">
+          <!-- Review 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-text">
+              "Evergreen Gardens have looked after our place for over a year now, lawn always sharp, hedges neat, and they leave the yard spotless every visit. Set and forget."
+            </blockquote>
+            <div class="testimonial-author">
+              <strong>Karen M.</strong>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-text">
+              "They completely transformed our tired backyard, new turf, fresh garden beds, and a proper clean-up. The landscaping looks incredible and the price was fair."
+            </blockquote>
+            <div class="testimonial-author">
+              <strong>Daniel R.</strong>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#1646D2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="testimonial-text">
+              "Booked them for a one-off clean-up before selling and they turned the whole garden around in a day. Reliable, friendly, and great value. Highly recommend."
+            </blockquote>
+            <div class="testimonial-author">
+              <strong>Sophie T.</strong>
+            </div>
+          </div>
+
+          </div>
+          <!-- DGG:REVIEWS:END -->
+
+        </div>
+
+        <!-- Right: large image with quote icon overlay -->
+        <div class="testimonials-img">
+          <img src="images/gardening-reviews-detail.webp" alt="A beautifully maintained garden by Evergreen Gardens" loading="lazy">
+          <div class="testimonials-quote-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <!-- n8n tokens: {{address}}, {{phone}}, {{email}}, {{google_maps_embed}}, {{client_id}}, {{webhook_url}}, {{lead_email}}, {{business_name}}, {{cta_text}} -->
+  <section id="contact">
+    <div class="container">
+
+      <!-- Centered heading -->
+      <div class="section-header contact-header">
+        <div class="section-subtitle">
+          <svg class="fan-icon" width="20" height="20" viewBox="0 0 28 28" fill="#fff" aria-hidden="true"><g transform="translate(2,2)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8"/></g></svg>
+          Contact Us
+        </div>
+        <h2>Get in Touch</h2>
+      </div>
+
+      <!-- Contact details row -->
+      <div class="contact-meta">
+        <span class="contact-meta-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          718 Glenferrie Rd, Hawthorn VIC 3122
+        </span>
+        <a href="tel:0412345678" class="contact-meta-item contact-meta-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.84a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          0412 345 678
+        </a>
+        <a href="mailto:info@evergreengardens.com.au" class="contact-meta-item contact-meta-link">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          info@evergreengardens.com.au
+        </a>
+      </div>
+
+      <!-- Map + Form grid -->
+      <div class="contact-grid">
+        <div class="contact-map fade-in">
+          <iframe
+            src="https://maps.google.com/maps?q=718+Glenferrie+Rd,+Hawthorn+VIC+3122,+Australia&amp;output=embed"
+            width="100%" height="100%"
+            style="border:0; border-radius:12px; min-height:420px;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Evergreen Gardens location — 718 Glenferrie Rd, Hawthorn VIC 3122"
+          ></iframe>
+        </div>
+        <div class="contact-form-wrap fade-in">
+          <form id="contact-form" class="contact-form" action="{{webhook_url}}" method="POST" novalidate aria-label="Contact enquiry form">
+            <h3>Send Us a Message</h3>
+            <p class="form-subtitle">We'll get back to you within 2 hours.</p>
+
+            <!-- Honeypot -->
+            <div class="form-hp" aria-hidden="true" tabindex="-1">
+              <label for="hp-website">Leave this blank</label>
+              <input type="text" id="hp-website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+
+            <!-- Hidden routing fields (patched at build time) -->
+            <input type="hidden" name="client_id" value="{{client_id}}">
+            <input type="hidden" name="client_business_name" value="{{business_name}}">
+            <input type="hidden" name="notify_email" value="{{lead_email}}">
+            <input type="hidden" name="page_url" value="">
+            <input type="hidden" name="form_rendered_at" value="">
+
+            <div class="form-group">
+              <label for="contact-name">Name <span class="required">*</span></label>
+              <input type="text" id="contact-name" name="name" required autocomplete="name" aria-required="true">
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email <span class="required">*</span></label>
+              <input type="email" id="contact-email" name="email" required autocomplete="email" aria-required="true">
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="contact-phone">Phone <span class="required">*</span></label>
+              <input type="tel" id="contact-phone" name="phone" required autocomplete="tel" aria-required="true">
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message <span class="optional">(optional)</span></label>
+              <textarea id="contact-message" name="message" rows="4" placeholder="Tell us about the job you need done..."></textarea>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-accent btn-submit" id="submit-btn">
+              <span class="btn-default-text">Send Message</span>
+              <span class="btn-loading-text" hidden aria-hidden="true">
+                <span class="btn-spinner" aria-hidden="true"></span>
+                <span>Sending...</span>
+              </span>
+            </button>
+          </form>
+
+          <div class="form-status" id="form-success" hidden role="alert" aria-live="polite">
+            <h4 class="form-success-title">Thanks for telling us your details.</h4>
+            <p class="form-success-body">A member of our team will contact you as soon as possible to discuss your job.</p>
+          </div>
+          <div class="form-status form-error-msg" id="form-error" hidden role="alert" aria-live="polite">
+            Something went wrong sending your enquiry. Please call us on <a href="tel:0412345678">0412 345 678</a>, or <a id="mailto-fallback" href="">email us directly</a>.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <!-- n8n tokens: {{logo_url}}, {{business_name}}, {{address}}, {{phone}}, {{email}},
+       {{social_facebook}}, {{social_instagram}}, {{social_linkedin}}, {{hours}} -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <!-- DGG:LOGO:FOOTER_CTA:START -->
+          <a href="#" class="nav-logo" aria-label="Evergreen Gardens Home">
+            <svg class="nav-logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="18" r="18" fill="#1646D2"/>
+              <g transform="translate(6,6)"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66l.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8" fill="#fff"/></g>
+            </svg>
+            <span class="nav-logo-text">EVERGREEN <strong>GARDENS</strong></span>
+          </a>
+          <!-- DGG:LOGO:FOOTER_CTA:END -->
+          <p class="footer-description">Reliable garden maintenance services for homes and businesses across Hawthorn and surrounding areas. Fully insured, police-checked, and available 24/7.</p>
+          <div class="footer-socials">
+            <!-- DGG:SOCIAL:FOOTER:START -->
+            <a href="#" class="social-circle" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="social-circle" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-circle" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.882 0 1.441 1.441 0 012.882 0z"/></svg>
+            </a>
+            <!-- DGG:SOCIAL:FOOTER:END -->
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <!-- DGG:FOOTER_SERVICES:START -->
+          <ul class="footer-services-list">
+            <li><a href="#services">General Home Repairs &amp; Maintenance</a></li>
+            <li><a href="#services">Carpentry &amp; Timber Repairs</a></li>
+            <li><a href="#services">Gutter Cleaning &amp; Repairs</a></li>
+            <li><a href="#services">Rubbish Removal &amp; Yard Clean-ups</a></li>
+            <li><a href="#services">Plastering &amp; Gyprock Wall Repairs</a></li>
+            <li><a href="#services">TV Mounting &amp; Wall Mounting</a></li>
+            <li><a href="#services">Flat-Pack &amp; Furniture Assembly</a></li>
+            <li><a href="#services">Tiling &amp; Regrouting</a></li>
+            <li><a href="#services">Door Installation &amp; Repairs</a></li>
+          </ul>
+          <!-- DGG:FOOTER_SERVICES:END -->
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1646D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>718 Glenferrie Rd, Hawthorn VIC 3122</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1646D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.84a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:0412345678">0412 345 678</a>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1646D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <a href="mailto:info@evergreengardens.com.au">info@evergreengardens.com.au</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Working Hours</h4>
+          <!-- DGG:FOOTER_HOURS:START -->
+          <table class="footer-hours-table" aria-label="Business hours">
+            <tbody>
+              <tr><td>Monday - Friday</td><td>7:00am - 6:00pm</td></tr>
+              <tr><td>Saturday</td><td>8:00am - 2:00pm</td></tr>
+              <tr><td>Sunday</td><td>Closed</td></tr>
+            </tbody>
+          </table>
+          <div class="footer-emergency">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1646D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.84a16 16 0 0 0 6.29 6.29l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>24/7 Emergency Callouts Available</span>
+          </div>
+          <!-- DGG:FOOTER_HOURS:END -->
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year"></span> Evergreen Gardens. All rights reserved.</p>
+        <p>Powered by <a href="https://digitalgrowthgenius.com" target="_blank" rel="noopener noreferrer">Digital Growth Genius</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
